@@ -20,7 +20,7 @@ func main() {
 		writeJSON(w, map[string]string{"version": version, "service": service})
 	})
 
-	log.Printf("%s listening on %s", service, port)
+	log.Printf("%s ready on %s", service, port)
 	log.Fatal(http.ListenAndServe(":"+port, mux))
 }
 
